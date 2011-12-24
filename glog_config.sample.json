@@ -1,0 +1,6 @@
+{
+	"repository" : "../blog_repository",
+	"author" : "Glog",
+	"blog_title" : "The Glob Blog",
+	"port" : 8080
+}
