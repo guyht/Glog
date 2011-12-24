@@ -29,17 +29,16 @@ The entire blog content is parsed loaded into memory.  Whenever a new article is
 Installation
 ============
 
-Setup your blog repository.  The recommended method is as follows:
 
-- Fork http://github.com/guyht/guido.
+- Fork http://github.com/guyht/guido. (for a default template)
 
 - Set up a github hook to trigger http://yourbloglocation/__render when a new update is pushed
 
-- Download the latest tag, then run
+- Download the latest tag of the Glog Blog, then run
 
     npm install
 
-in the glog root directory.  This will install the required additional modules.
+   in the glog root directory.  This will install the required additional modules.
 
 - Edit glog_config.sample.json, and rename to glog_config.json.
 
@@ -47,4 +46,4 @@ in the glog root directory.  This will install the required additional modules.
 
     node server.js
 
-Et voila
+Your blog should now be up and running
