@@ -1,3 +1,5 @@
+Note: This script is still in development and is not yet in a fully working state
+
 The Glog Blog
 =============
 
