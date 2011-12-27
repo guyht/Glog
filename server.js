@@ -17,6 +17,11 @@ glog.rebuild(function(options) {
 					res.end();
 				});
 			});
+			app.post('/__render', function(req, res, next) {
+				glog.rebuild(function(options) {
+					res.end();
+				});
+			});
 			app.get('/:article', glog.req_article);
 		})
 	).listen(options.port);
