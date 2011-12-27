@@ -1,5 +1,5 @@
 {
-	"repository" : "../blog_repository",
+	"blog_repository" : "git://path/to/blog/content",
 	"author" : "Glog",
 	"blog_title" : "The Glob Blog",
 	"port" : 8080

@@ -8,7 +8,7 @@ glog.rebuild(function(options) {
 	console.log('Starting server on port ' + options.port);
 
 	var server = connect.createServer(
-		connect.static(path.join(options.repository, '/public')),
+		connect.static(path.join('blog_repo', '/public')),
 		connect.staticCache(),
 		connect.router(function(app) {
 			app.get('/', glog.req_home);
