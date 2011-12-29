@@ -22,7 +22,7 @@ glog.rebuild(function(options) {
 					res.end();
 				});
 			});
-			app.get('/:article', glog.req_article);
+			app.get('/:year/:month/:article', glog.req_article);
 		})
 	).listen(options.port);
 });
