@@ -23,6 +23,7 @@ glog.rebuild(function(options) {
 				});
 			});
 			app.get('/:year/:month/:article', glog.req_article);
+			app.get('/*', glog.req_home);
 		})
 	).listen(options.port);
 });
