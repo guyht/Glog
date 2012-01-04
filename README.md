@@ -12,17 +12,19 @@ The idea of the Glog Blog was to create a super simple, git and nodejs backed bl
 
 
 ### Installation
-- Fork Glog (git clone git@github.com:guyht/Glog.git)
-- **Important:** Run
 
-    git submodule init
-    git submodule update
-
+    `$ git clone git clone git@github.com:guyht/Glog.git
+    $ cd Glog
+    $ git submodule init
+    $ git submodule update
+    $ cp glog_config.sample.json glog_config.json
+    $ vi glog_config.sample.json`
+    
 - Edit glog_config.sample.json, and rename to glog_config.json
 - Set up a github hook to trigger http://yourbloglocation/__render when a new update is pushed
 - Run
 
-    node server.js
+    `$ node server.js`
 
 Your blog should now be up and running
 
