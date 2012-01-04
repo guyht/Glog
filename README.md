@@ -13,7 +13,7 @@ The idea of the Glog Blog was to create a super simple, git and nodejs backed bl
 
 ### Installation
 
-    $ git clone git clone git@github.com:guyht/Glog.git
+    $ git clone git@github.com:guyht/Glog.git
     $ cd Glog
     $ git submodule init
     $ git submodule update
