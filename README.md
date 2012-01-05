@@ -60,7 +60,16 @@ The blog content is stored in a git repository that has the following structure
         "url"    : "a-test-article"
     }
 
-    This is the content of the post.  You can use markdown to format it, for example, *this text will appear in italic*, **and this will appear in bold**.
+    This is the content of the post.  You can use markdown to format it,
+    for example, *this text will appear in italic*, **and this will appear in bold**.
+
+You could then add your new blog entry as follows
+
+    $ git add articles/a-test-article.txt
+    $ git commit -a -m "Added new article: A Test Article"
+    $ git push origin master
+
+If your git hook is setup correctly, the changes will automatically be pushed to your Glog blog!
 
 **The public folder** contains any css files that are required by the layout.jade template
 
