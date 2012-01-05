@@ -3,7 +3,7 @@ The Glog Blog
 
 The idea of the Glog Blog was to create a super simple, git and nodejs backed blog that used markdown for formatting.  I find wordpress tremendously cumbersome and wanted to come up with a super simple solution.  Glog is (currently) entierly written in under 350 lines of JavaScript.
 
-### Features
+# Features
 - Git and NodeJS backed
 - Simple to setup
 - Easy configuration
@@ -11,12 +11,11 @@ The idea of the Glog Blog was to create a super simple, git and nodejs backed bl
 - Disqus and Google Analytic support
 
 
-### Installation
+# Installation
 
     $ git clone git@github.com:guyht/Glog.git
     $ cd Glog
-    $ git submodule init
-    $ git submodule update
+	$ npm install
     $ cp glog_config.sample.json glog_config.json
     $ vi glog_config.sample.json
 
@@ -28,7 +27,12 @@ The idea of the Glog Blog was to create a super simple, git and nodejs backed bl
 
 Your blog should now be up and running
 
-### The principle
+**Note:** You if you do not have npm installed then you can alternatively run
+
+    git submodule init
+    git submodule update
+
+# The principle
 
 The blog content is stored in a git repository that has the following structure
 
@@ -54,7 +58,7 @@ The blog content is stored in a git repository that has the following structure
 The entire blog content is parsed and loaded into memory.  Whenever a new article is published, a git hook triggers the myblog/__render URL which will tell Glog to re-render the blog and update its contents.
 
 
-### Configuration options
+# Configuration options
 These options should be placed in glog_cofig.json and should be valid JSON
 
     blog_repository - The url of the blog repository (e.g. git@github.com:guyht/Guido.git)
@@ -64,4 +68,9 @@ These options should be placed in glog_cofig.json and should be valid JSON
     disqus_id       - (Optional) Disqus ID to use for comments
     analytics_code  - (Optional) Google Analytics code
     base_url        - (Optional) Base URL for the blog.  Defaults to '/'
+	cache_time      - (Optional) Time in seconds to cache each page
+
+# Running the tests
+
+    $ make test
 
