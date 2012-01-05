@@ -1,3 +1,5 @@
+[![Build Status](https://secure.travis-ci.org/guyht/Glog.png)](http://travis-ci.org/guyht/Glog)
+
 The Glog Blog
 =============
 
