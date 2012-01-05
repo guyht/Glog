@@ -66,7 +66,7 @@ The blog content is stored in a git repository that has the following structure
 You could then add your new blog entry as follows
 
     $ git add articles/a-test-article.txt
-    $ git commit -a -m "Added new article: A Test Article"
+    $ git commit -m "Added new article: A Test Article"
     $ git push origin master
 
 If your git hook is setup correctly, the changes will automatically be pushed to your Glog blog!
