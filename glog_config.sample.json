@@ -1,7 +1,8 @@
 {
 	"blog_repository" : "git@github.com:guyht/Guido.git",
-	"author" : "Glog",
-	"blog_title" : "The Glob Blog",
-	"port" : 8080,
-	"base_url" : ""
+	"author"          : "Glog",
+	"blog_title"      : "The Glob Blog",
+	"port"            : 8080,
+	"base_url"        : "",
+	"cache_time"      : 28800
 }
