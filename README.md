@@ -31,15 +31,25 @@ Your blog should now be up and running
 
 # Guido
 
-[[Giudo](https://github.com/guyht/Guido)] is the default template for Glog.  It consists of a simplistic layout and a couple of examples to get you going.  I suggest that you use it as a starting point (i.e. fork it) for your own blog.  The glog_config.json file contains the Guido repository as a default.
+Giudo [https://github.com/guyht/Guido](https://github.com/guyht/Guido) is the default template for Glog.  It consists of a simplistic layout and a couple of examples to get you going.  I suggest that you use it as a starting point (i.e. fork it) for your own blog.  The glog_config.json file contains the Guido repository as a default.
 
 # The principle
 
 The blog content is stored in a git repository that has the following structure
 
-- An articles folder
-- A public folder
-- A layout.jade file
+    /
+    |
+    +- layout.jade
+    |
+    +- articles/
+    |  |
+    |  +- article-1.txt
+    |  |
+    |  +- article-2.txt
+    |
+    +- public/
+       |
+       +- main.css
 
 **The articles folder** contains blog entries.  Each blog entry consists or a JSON header that defines the author, date, blog entry title, and optionally a custom url. The blog content is written in markdown.  Below is an example.
 
