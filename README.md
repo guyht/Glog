@@ -29,11 +29,6 @@ The idea of the Glog Blog was to create a super simple, git and nodejs backed bl
 
 Your blog should now be up and running
 
-**Note:** You if you do not have npm installed then you can alternatively run
-
-    git submodule init
-    git submodule update
-
 # The principle
 
 The blog content is stored in a git repository that has the following structure
