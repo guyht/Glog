@@ -1,6 +1,6 @@
 {
 	"blog_repository" : "git@github.com:guyht/Guido.git",
 	"author" : "Glog",
-	"blog_title" : "The Glog Blog",
+	"blog_title" : "The Glo Blog",
 	"port" : 8080
 }
