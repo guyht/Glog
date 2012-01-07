@@ -3,10 +3,10 @@
 The Glog Blog
 =============
 
-The idea of the Glog Blog was to create a super simple, git and nodejs backed blog that used markdown for formatting.  I find wordpress tremendously cumbersome and wanted to come up with a super simple solution.  Glog is (currently) entierly written in under 350 lines of JavaScript.
+The idea of the Glog Blog was to create a super simple, Git and Node.js backed blog that used markdown for formatting.  I find Wordpress tremendously cumbersome and wanted to come up with a super simple solution.  Glog is (currently) entirely written in under 350 lines of JavaScript.
 
 # Features
-- Git and NodeJS backed
+- Git and Node.js backed
 - Simple to setup
 - Easy configuration
 - Custom URLs
@@ -31,7 +31,7 @@ Your blog should now be up and running
 
 # Guido
 
-Giudo [https://github.com/guyht/Guido](https://github.com/guyht/Guido) is the default template for Glog.  It consists of a simplistic layout and a couple of examples to get you going.  I suggest that you use it as a starting point (i.e. fork it) for your own blog.  The glog_config.json file contains the Guido repository as a default.
+Guido [https://github.com/guyht/Guido](https://github.com/guyht/Guido) is the default template for Glog.  It consists of a simplistic layout and a couple of examples to get you going.  I suggest that you use it as a starting point (i.e. fork it) for your own blog.  The glog_config.json file contains the Guido repository as a default.
 
 # The principle
 
