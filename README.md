@@ -81,14 +81,15 @@ The entire blog content is parsed and loaded into memory.  Whenever a new articl
 # Configuration options
 These options should be placed in glog_cofig.json and should be valid JSON
 
-    blog_repository - The url of the blog repository (e.g. git@github.com:guyht/Guido.git)
-    author          - The default blog author (will be used if author is not specified in an individual post)
-    blog_title      - The title to display at top of the blog
-    port            - The port number to run the blog on
-    disqus_id       - (Optional) Disqus ID to use for comments
-    analytics_code  - (Optional) Google Analytics code
-    base_url        - (Optional) Base URL for the blog.  Defaults to '/'
-	cache_time      - (Optional) Time in seconds to cache each page
+    blog_repository  - The url of the blog repository (e.g. git@github.com:guyht/Guido.git)
+    author           - The default blog author (will be used if author is not specified in an individual post)
+    blog_title       - The title to display at top of the blog
+    port             - The port number to run the blog on
+    disqus_id        - (Optional) Disqus ID to use for comments
+    analytics_code   - (Optional) Google Analytics code
+    base_url         - (Optional) Base URL for the blog.  Defaults to '/'
+	cache_time       - (Optional) Time in seconds to cache each page
+	article_per_page - (Optional) Number of articles to display on a page. Defaults to 10
 
 # Running the tests
 
