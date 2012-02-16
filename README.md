@@ -90,6 +90,7 @@ These options should be placed in glog_cofig.json and should be valid JSON
     base_url         - (Optional) Base URL for the blog.  Defaults to '/'
 	cache_time       - (Optional) Time in seconds to cache each page
 	article_per_page - (Optional) Number of articles to display on a page. Defaults to 10
+	show_author      - (Optional) Display the author name in the article title.  Defaults to false
 
 # Running the tests
 
