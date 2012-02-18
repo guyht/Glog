@@ -31,6 +31,9 @@ glog.rebuild(function() {
 				app.get('/:year/:month/:article', function(req, res, next) {
 						   glog.req_article(req, res, next, options)
 					});
+				app.get('/rss.xml', function(req, res, next) {
+						   glog.req_rss(req, res, next, options)
+					});
 				app.get('/*', function(req, res, next) {
 						   glog.req_home(req, res, next, options)
 					});
