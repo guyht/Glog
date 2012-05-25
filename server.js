@@ -1,5 +1,5 @@
 var glog = require('./lib/glog'),
-	connect = require('connect'),
+	express = require('express'),
 	path = require('path');
 
 
@@ -8,10 +8,10 @@ glog.rebuild(function() {
 
 		console.log('Starting server on port ' + options.port);
 
-		var server = connect.createServer(
-			connect.static(path.join('blog_repo', '/public')),
-			connect.staticCache(),
-			connect.router(function(app) {
+		var server = express.createServer(
+			express.static(path.join('blog_repo', '/public')),
+			express.staticCache(),
+			express.router(function(app) {
 				app.get('/__render', function(req, res, next) {
 					glog.rebuild(function() {
 						res.end();
