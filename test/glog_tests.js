@@ -43,10 +43,12 @@ describe('Glog', function() {
 
 	it('should load articles from the cloned repository', function(done) {
 		glog.load_configs(function(options) {
-			glog.load_articles(options, function(articles) {
-				assert.equal(articles.length, 2);
-				done();
-			});
+            glog.load_plugins(options, function(err) {
+                glog.load_articles(options, function(articles) {
+                    assert.equal(articles.length, 2);
+                    done();
+                });
+            });
 		});
 	});
 
@@ -61,6 +63,18 @@ describe('Glog', function() {
 			});
 		});
 	});
+
+    it('should handle plugins', function(done) {
+        glog.load_configs(function(options) {
+            options.plugins = ['example'];
+			glog.load_articles(options, function(articles) {
+				glog.render_blog(options, articles, function() {
+					assert.equal(articles[0].title, 'Title changed by plugin');
+					done();
+				});
+			});
+        });
+    });
 
 });
 

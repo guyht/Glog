@@ -96,3 +96,30 @@ These options should be placed in glog_cofig.json and should be valid JSON
 
     $ make test
 
+# Plugins
+Glog contains a simple plugin system which allows 3rd party software to modify the content and meta data of the articles.
+
+To install a plugin, simply place the plugin file in the ./plugins directory and add the following to you config.json file:
+
+    ...
+    plugins : [
+      'myplugin'
+    ]
+    ....
+
+Glog will handle the rest.
+
+### Writing plugins
+Writing a plugin is also very simple.  Your plugin should expose a 'load' function whch accepts a 'glog' object.  The glog object contains a set of hooks (currenlty only *registerArticleHook*) which take as an argument a function that is passed an articles object and a callback.  Simply make your modifications to the articles object and invoke the callback passing errors and the articles object as arguments.
+
+A simple plugin might look like this:
+
+    module.exports.load = function(glog) {
+        glog.registerArticleHook(function(articles, cb) {
+            for(var i=0;i<articles.length;i++) {
+                articles[i].title = 'Title changed by plugin';
+            }
+            cb(null, articles);
+        });
+    }
+
