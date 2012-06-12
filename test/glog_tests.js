@@ -1,5 +1,4 @@
-var glog = require('../lib/glog'),
-    assert = require('assert'),
+var assert = require('assert'),
     exec = require('child_process').exec;
 
 describe('Glog', function() {
@@ -11,6 +10,7 @@ describe('Glog', function() {
     });
 
     it('should load configs from a JSON file', function(done) {
+        var glog = require('../lib/glog');
         glog.load_configs(function(options) {
             assert.equal(options.blog_title, 'The Glog Blog');
             assert.equal(options.port, 8080);
@@ -21,6 +21,7 @@ describe('Glog', function() {
 
 
     it('should be cloned from a remote repository', function(done) {
+        var glog = require('../lib/glog');
         glog.load_configs(function(options) {
             glog.get_repo(options.blog_repository, function(err) {
                 console .log('err ' + err);
@@ -32,6 +33,7 @@ describe('Glog', function() {
 
 
     it('should be pulled from a remote repository', function(done) {
+        var glog = require('../lib/glog');
         glog.load_configs(function(options) {
             glog.update_repo(options.blog_repository, function(err) {
                 assert.ok(err);
@@ -42,6 +44,7 @@ describe('Glog', function() {
 
 
     it('should load articles from the cloned repository', function(done) {
+        var glog = require('../lib/glog');
         glog.load_configs(function(options) {
             glog.load_plugins(options, function(err) {
                 glog.load_articles(options, function(articles) {
@@ -53,6 +56,7 @@ describe('Glog', function() {
     });
 
     it('should render the articles', function(done) {
+        var glog = require('../lib/glog');
         glog.load_configs(function(options) {
             glog.load_articles(options, function(articles) {
                 glog.render_blog(options, articles, function() {
@@ -64,6 +68,7 @@ describe('Glog', function() {
     });
 
     it('should handle plugins', function(done) {
+        var glog = require('../lib/glog');
         glog.load_configs(function(options) {
             options.plugins.push("example");
             glog.load_plugins(options, function(){
