@@ -8,7 +8,7 @@
  */
 
 module.exports.load = function(glog) {
-    glog.registerArticleHook(function(articles, cb) {
+    glog.registerPostArticleHook(function(articles, cb) {
         for(var i=0;i<articles.length;i++) {
             articles[i].title = 'Title changed by plugin';
         }
