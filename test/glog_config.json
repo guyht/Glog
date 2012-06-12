@@ -2,6 +2,5 @@
 	"blog_repository" : "https://github.com/guyht/Guido.git",
 	"author" : "Glog",
 	"blog_title" : "The Glog Blog",
-	"port" : 8080,
-  "plugins": ["example"]
+	"port" : 8080
 }
