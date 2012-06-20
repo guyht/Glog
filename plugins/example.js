@@ -14,5 +14,10 @@ module.exports.load = function(glog) {
         }
         cb(null, articles);
     });
-
+    glog.registerPreArticleHook(function(articles, cb) {
+      for(var i=0;i<articles.length;i++){
+        articles[i].year = '1988'
+      }
+      cb(null, articles);
+    });
 }
