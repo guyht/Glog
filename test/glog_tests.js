@@ -75,6 +75,7 @@ describe('Glog', function() {
                 glog.load_articles(options, function(articles) {
                     glog.render_blog(options, articles, function() {
                         assert.equal(articles[0].title, 'Title changed by plugin');
+                        assert.equal(articles[0].year, '1988');
                         done();
                     });
                 });
