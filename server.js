@@ -38,6 +38,6 @@ glog.rebuild(function() {
                            glog.req_home(req, res, next, options)
                     });
             })
-        ).listen(options.port);
+        ).listen(process.env.VCAP_APP_PORT || options.port);
     });
 });
