@@ -2,15 +2,19 @@ var glog = require('./lib/glog'),
     express = require('express'),
     path = require('path');
 
+// Custom log package
+var log = require('glogger')('SERVER');
+
 
 glog.rebuild(function() {
     glog.load_configs(function(options) {
 
-        console.log('Starting server on port ' + options.port);
+        log.info('Starting server on port ' + options.port);
 
         var server = express.createServer(
             express.static(path.join('blog_repo', '/public')),
             express.staticCache(),
+            express.logger({'format': 'tiny', 'stream': log.stream()}),
             express.router(function(app) {
                 app.get('/__render', function(req, res, next) {
                     glog.rebuild(function() {
