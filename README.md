@@ -1,5 +1,8 @@
 [![Build Status](https://secure.travis-ci.org/guyht/Glog.png)](http://travis-ci.org/guyht/Glog)
 
+### Upgrading to version 2x
+As of version 2, Glog is using the [node-config](https://github.com/lorenwest/node-config) module to handle configuration.  While this is a step forward for Glog, allowing you to easily fine tune configuration for your environments, it means that the name and location of the config file has changed.  See the configuration section below.
+
 The Glog Blog
 =============
 
@@ -79,7 +82,9 @@ The entire blog content is parsed and loaded into memory.  Whenever a new articl
 
 
 # Configuration options
-These options should be placed in glog_cofig.json and should be valid JSON
+Glog has recently switched to using [node-config](https://github.com/lorenwest/node-config).  This new library makes handling different configuration for different environments a breze.  To get you up and running, the following instructions are all you need, but if you would like to setup different configurations for different environments, take a peek at the node-config documentation.
+
+These options should be placed in config/default.json (the default configuration file) and should be valid JSON
 
     blog_repository  - The url of the blog repository (e.g. git@github.com:guyht/Guido.git)
     author           - The default blog author (will be used if author is not specified in an individual post)
