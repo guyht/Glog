@@ -1,5 +1,6 @@
 var assert = require('assert'),
-    exec = require('child_process').exec;
+    exec = require('child_process').exec,
+    _ = require('underscore');
 
 describe('Glog', function() {
 
@@ -89,6 +90,7 @@ describe('Glog', function() {
             glog.load_plugins(options, function(){
                 glog.load_articles(options, function(articles) {
                     glog.render_blog(options, articles, function() {
+                        articles = _.sortBy(articles, 'date');
                         assert.equal(articles[0].show_on_home_page, false);
                         assert.equal(articles[1].show_on_home_page, true);
                         done();
