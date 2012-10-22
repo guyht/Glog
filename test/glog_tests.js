@@ -48,7 +48,7 @@ describe('Glog', function() {
         glog.load_configs(function(options) {
             glog.load_plugins(options, function(err) {
                 glog.load_articles(options, function(articles) {
-                    assert.equal(articles.length, 2);
+                    assert.equal(articles.length, 3);
                     done();
                 });
             });
@@ -83,6 +83,21 @@ describe('Glog', function() {
         });
     });
 
+    it('default to show on home page', function(done) {
+        var glog = require('../lib/glog');
+        glog.load_configs(function(options) {
+            glog.load_plugins(options, function(){
+                glog.load_articles(options, function(articles) {
+                    glog.render_blog(options, articles, function() {
+                        assert.equal(articles[0].show_on_home_page, false);
+                        assert.equal(articles[1].show_on_home_page, true);
+                        done();
+                    });
+                });
+            });
+        });
+
+    });
 
 });
 
