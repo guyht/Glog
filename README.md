@@ -21,10 +21,10 @@ The idea of the Glog Blog was to create a super simple, Git and Node.js backed b
     $ git clone git@github.com:guyht/Glog.git
     $ cd Glog
 	$ npm install
-    $ cp glog_config.sample.json glog_config.json
-    $ vi glog_config.sample.json
+    $ cp config/default.sample.json config/default.json
+    $ vi config/default.sample.json
 
-- Edit glog_config.sample.json, and rename to glog_config.json
+- Edit config/default.sample.json, and rename to config/default.json
 - Set up a github hook to trigger http://yourbloglocation/__render when a new update is pushed
 - Run
 
@@ -34,7 +34,7 @@ Your blog should now be up and running
 
 # Guido
 
-Guido ([https://github.com/guyht/Guido](https://github.com/guyht/Guido)) is the default template for Glog.  It consists of a simplistic layout and a couple of examples to get you going.  I suggest that you use it as a starting point (i.e. fork it) for your own blog.  The glog_config.json file contains the Guido repository as a default.
+Guido ([https://github.com/guyht/Guido](https://github.com/guyht/Guido)) is the default template for Glog.  It consists of a simplistic layout and a couple of examples to get you going.  I suggest that you use it as a starting point (i.e. fork it) for your own blog.  The config/default.json file contains the Guido repository as a default.
 
 # The principle
 
