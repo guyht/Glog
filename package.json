@@ -10,7 +10,8 @@
     "mocha": ">= 0.8.2",
     "rss": ">= 0.0.3",
     "async": ">= 0.1.22",
-    "config": "~0.4.17"
+    "config": "~0.4.17",
+    "gloggler" : "git://github.com/guyht/glogger.git"
   },
   "devDependencies": {
     "underscore": "~1.4.2"
